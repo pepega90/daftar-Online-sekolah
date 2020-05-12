@@ -1,0 +1,22 @@
+ <%- include('../include/top.ejs') %>
+ <%- include('../include/navbar.ejs') %>
+<div class="container">
+  <h3>Detail Peserta</h3>
+	<div class="card detail-kartu">
+	<div class="data-siswa">
+    <ul style="margin: 0.5rem 0" >
+      <li class="collection-item"><strong>Nama: </strong><%=siswa.nama%></li>
+      <li class="collection-item"><strong>NISN:</strong> <%=siswa.nisn%></li>
+      <li class="collection-item"><strong>NIK: </strong><%=siswa.nik%></li>
+      <li class="collection-item"><strong>Tanggal Lahir: </strong><%=new Date(siswa.tanggal_lahir).toDateString() %></li>
+      <li class="collection-item"><strong>Jenis Kelamin: </strong><%=siswa.jenis_kelamin%></li>
+      <li class="collection-item"><strong>Agama: </strong><%=siswa.agama%></li>
+      <li class="collection-item"><strong>Asal Sekolah: </strong><%=siswa.asal_sekolah%></li>
+    </ul>
+  </div>
+    <div>
+      <img class="foto-daftar" src="/<%= siswa.foto %>" />
+    </div>
+	</div>
+</div>
+ <%- include('../include/bottom.ejs') %>

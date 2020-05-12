@@ -1,0 +1,37 @@
+.tengah {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.err {
+	background-color: crimson;
+	padding: 0.3rem;
+	color: #ffffff;
+}
+
+.data-siswa ul li {
+	margin: 2rem 0;
+}
+
+.detail-kartu {
+	height: 70vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.foto-daftar {
+	border-radius: 20px;
+	width: 300px;
+	height: 300px;
+}
+
+/*error validation*/
+
+.invalid {
+	border-bottom: 1px solid #000;
+	box-shadow: 0 1px 0 0 #000;
+}

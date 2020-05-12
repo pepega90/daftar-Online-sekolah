@@ -1,0 +1,45 @@
+ <%- include('../include/top.ejs') %>
+ <%- include('../include/navbar.ejs') %>
+<div class="container">
+  <div class="valign-wrapper">
+  <h5>Selamat Datang, <%= isAdmin.username %> Di admin Panel</h5>
+</div>
+<div>
+	<img style="width: 50%;" src="/img/smk-bisa.png" />
+</div>
+	<div class="row">
+		<div class="col s4">
+			<div class="card">
+		        <div class="card-content black-text">
+		          <span class="card-title">Total Siswa Laki-Laki</span>
+		          <h5><%= totalLaki %> orang</h5>
+		        </div>
+      		</div>
+      	</div>
+      	<div class="col s4">
+			<div class="card">
+		        <div class="card-content black-text">
+		          <span class="card-title">Total Siswa Perempuan</span>
+		          <h5><%= totalPerempuan %> orang</h5>
+		        </div>
+      		</div>
+      	</div>
+      		<div class="col s4">
+			<div class="card">
+		        <div class="card-content black-text">
+		          <span class="card-title">Total Siswa LGBT</span>
+		          <h5><%= totalGay %> orang</h5>
+		        </div>
+      		</div>
+      	</div>
+      	<div class="col s12">
+			<div class="card">
+		        <div class="card-content black-text">
+		          <span class="card-title">Total Siswa Baru Yang Mendaftar</span>
+		          <h5><%= totalSiswa %> orang</h5>
+		        </div>
+      		</div>
+      	</div>
+	</div>
+</div>
+<%- include('../include/bottom.ejs') %>

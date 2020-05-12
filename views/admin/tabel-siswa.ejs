@@ -1,0 +1,32 @@
+ <%- include('../include/top.ejs') %>
+ <%- include('../include/navbar.ejs') %>
+<h3 class="center-align">Daftar Siswa Baru</h3>
+<div class="container">
+	 <table>
+        <thead>
+          <tr>
+              <th>Nama</th>
+              <th>Jenis Kelamin</th>
+              <th>Asal Sekolah</th>
+              <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% siswa.forEach(murid => { %>
+          <tr>
+            <td><%= murid.nama %></td>
+            <td><%= murid.jenis_kelamin %></td>
+            <td><%= murid.asal_sekolah %></td>
+            <td><a href="/admin/detail-siswa/<%= murid._id %>" class="btn" style="background-color:lightgreen;">Detail</a></td>
+            <td>
+            <form action="/admin/daftar-siswa-baru/<%= murid._id %>" method="post">
+            <button class="btn" style="background-color:crimson;">Delete</button>
+            </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+</div>
+<a href="/admin/cetak-tabel-pendaftaran" style="margin: 1rem 200px; width: 300px;" class="btn">Cetak Laporan Daftar Siswa Baru</button>
+<%- include('../include/bottom.ejs') %>

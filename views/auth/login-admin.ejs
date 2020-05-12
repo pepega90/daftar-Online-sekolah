@@ -1,0 +1,27 @@
+ <%- include('../include/top.ejs') %>
+ 	<div class="container">
+ 		<div class="card">
+ 		<div class="card-title" style="text-align: center;">
+ 		<h3>Admin SMKN Pepega 01</h3>
+ 		<i style="font-size: 3em" class="material-icons">person</i>
+        </div>
+        <div class="card-content">
+        <form action="/login-admin" method="post">
+			 	<div class="input-field">
+				 	<label for="username">Username</label>
+				 	<input value="<% if(hasError) { %><%=oldInput.username%><% } %>" class="<%= errMessage.find(e => e.param === 'username') ? 'invalid' : '' %>" name="username" type="text" id="username"/>
+				 	<span class="helper-text" data-error="Username Tidak Boleh Kosong"></span>
+			 	</div>
+			 	<div class="input-field">
+				 	<label for="password">Password</label>
+				 	<input value="<% if(hasError) { %><%=oldInput.password%><% } %>" class="<%= errMessage.find(e => e.param === 'password') ? 'invalid' : '' %>" name="password" type="password" id="password"/>
+				 	<span class="helper-text" data-error="Password Tidak Boleh Kosong"></span>
+			 	</div>
+			 	<div class="card-action">
+          			<button class="btn">Submit</button>
+        		</div>
+          </form>
+        </div>
+      </div>
+ 	</div>
+ <%- include('../include/bottom.ejs') %>

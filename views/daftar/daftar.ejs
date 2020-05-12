@@ -1,0 +1,65 @@
+ <%- include('../include/top.ejs') %>
+ <div class="container">
+ <h3 class="center-align">Pendaftaran Online SMKN Pepega 01</h3>
+  <form enctype="multipart/form-data" action="/" method="post">
+ 	<div class="input-field">
+	 	<label for="nama">Nama Lengkap</label>
+	 	<input class="<%= errMessage.find(e => e.param === 'nama') ? 'invalid' : '' %>" name="nama" type="text" id="nama"/>
+    <span class="helper-text" data-error="Nama Tidak Boleh Kosong"></span>
+ 	</div>
+ 	<div class="input-field">
+	 	<label for="nisn">NISN</label>
+	 	<input class="<%= errMessage.find(e => e.param === 'nisn') ? 'invalid' : '' %>" name="nisn" type="text" id="nisn"/>
+    <span class="helper-text" data-error="NISN Tidak Boleh Kosong"></span>
+ 	</div>
+ 	<div class="input-field">
+	 	<label for="nik">NIK</label>
+	 	<input class="<%= errMessage.find(e => e.param === 'nik') ? 'invalid' : '' %>" name="nik" type="text" id="nik"/>
+    <span class="helper-text" data-error="NIK Tidak Boleh Kosong"></span>
+ 	</div>
+ 	<div class="input-field">
+	 	<label for="lahir">Tanggal Lahir</label>
+	 	 <input class="<%= errMessage.find(e => e.param === 'lahir') ? 'invalid' : '' %>" name="lahir" id="lahir" type="text" class="datepicker">
+     <span class="helper-text" data-error="Tanggal Lahir Tidak Boleh Kosong"></span>
+ 	</div>
+ 	 <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input name="image" type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate " placeholder="Masukkan Gambar" type="text">
+        <span class="helper-text" data-error="Foto Diri Tidak Boleh Kosong"></span>
+      </div>
+    </div>
+ 	<div class="input-field">
+ 	<p for="kelamin">Pilih Jenis Kelamin</p>
+	 <select style="display: block;" name="kelamin">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="laki-laki">Lak-Laki</option>
+      <option value="perempuan">Perempuan</option>
+      <option value="lgbt">LGBT</option>
+    </select>
+ 	</div>
+ 	<div class="input-field">
+ 	<p for="agama">Pilih Agama</p>
+	 <select style="display: block;" name="agama">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="Islam">Islam</option>
+      <option value="Kristen">Kristen</option>
+      <option value="Buddha">Buddha</option>
+      <option value="Katolik">Katolik</option>
+    </select>
+ 	</div>
+ 	<div class="input-field">
+	 	<label for="sekolah">Asal Sekolah</label>
+	 	<input class="<%= errMessage.find(e => e.param === 'sekolah') ? 'invalid' : '' %>" name="sekolah" type="text" id="sekolah"/>
+    <span class="helper-text" data-error="Asal Sekolah Tidak Boleh Kosong"></span>
+ 	</div>
+ 	<button class="btn">Submit</button>
+ </form>
+ 	<div style="margin: 2rem 0; border-top: 5px dotted #ccc;">
+ 		<a href="/login-admin" style="margin: 1.2rem 0; background-color: salmon;" class="btn">Login Khusus Admin</a>
+ 	</div>
+ </div>
+ <%- include('../include/bottom.ejs') %>

@@ -1,0 +1,31 @@
+ <%- include('../include/top.ejs') %>
+ <header>
+    <h4 class="center-align">Laporan Daftar Siswa Baru</h4>
+    <h5 style="font-weight:bold;" class="center-align">SMKN Pepega 01</h5>
+  </header>
+<div class="container">
+	 <table>
+        <thead>
+          <tr>
+             <th>No</th>
+              <th>Nama</th>
+              <th>Jenis Kelamin</th>
+              <th>Asal Sekolah</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% siswa.forEach((murid, index) => { %>
+          <tr>
+            <td><%= index %> </td>
+            <td><%= murid.nama %></td>
+            <td><%= murid.jenis_kelamin %></td>
+            <td><%= murid.asal_sekolah %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+</div>
+  <script type="text/javascript">
+  window.onload = function() {window.print()}
+ </script>
+<%- include('../include/bottom.ejs') %>

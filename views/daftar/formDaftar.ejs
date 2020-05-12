@@ -1,0 +1,29 @@
+ <%- include('../include/top.ejs') %>
+ <div class="container">
+ 	<header>
+ 		<h4 class="center-align">Pemerintah Kabupaten Pepega</h4>
+ 		<h5 style="font-weight:bold;" class="center-align">SMKN Pepega 01</h5>
+ 	</header>
+ 	<hr/>
+ 	<div class="content">
+ 		<strong>Yth, Kepada Calon Siswa Baru</strong>
+ 		<br/>
+ 		<p>Yang bertanda tangan dibawah ini:</p>
+ 		<ul style="margin-left: 50px">
+ 			<li style="margin: 0.5rem 0"><strong>Nama</strong>: <%= siswa.nama %></li>
+ 			<li style="margin: 0.5rem 0"><strong>NISN</strong>: <%= siswa.nisn %></li>
+ 			<li style="margin: 0.5rem 0"><strong>NIK</strong>: <%= siswa.nik %></li>
+ 			<li style="margin: 0.5rem 0"><strong>Tanggal Lahir</strong>: <%= new Date(siswa.tanggal_lahir).toDateString() %></li>
+ 			<li style="margin: 0.5rem 0"><strong>Jenis Kelamin</strong>: <%= siswa.jenis_kelamin %></li>
+ 			<li style="margin: 0.5rem 0"><strong>Agama</strong>: <%= siswa.agama %></li>
+ 			<li style="margin: 0.5rem 0"><strong>Asal Sekolah</strong>: <%= siswa.asal_sekolah %></li>
+ 		</ul>
+ 	</div>
+ 	<div>
+ 		<p>Anda Telah Bersedia Untuk Menuntut Ilmu Di Sekolah ini, di mohon untuk melengkapi surat-surat yang diperlukan
+ 	</div>
+ </div>
+  <script type="text/javascript">
+ 	window.onload = function() {window.print()}
+ </script>
+ <%- include('../include/bottom.ejs') %>
