@@ -27,6 +27,11 @@
           <% }) %>
         </tbody>
       </table>
+      <ul class="pagination">
+            <li class="waves-effect"><a href="?halaman=<%= prevHal %>"><i class="material-icons">chevron_left</i></a></li>
+            <li class="waves-effect active"><a href="?halaman=<%= hal %>"><%= hal %></a></li>
+            <li class="waves-effect"><a href="?halaman=<%= nextHal %>"><i class="material-icons">chevron_right</i></li>
+        </ul>
 </div>
 <a href="/admin/cetak-tabel-pendaftaran" style="margin: 1rem 200px; width: 300px;" class="btn">Cetak Laporan Daftar Siswa Baru</button>
 <%- include('../include/bottom.ejs') %>
